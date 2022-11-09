@@ -1,0 +1,42 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+
+ /*
+  * Nav layout stuff
+  */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  gap: 90px;
+  height: 120px;
+  width: device-width;
+  color: #FFFFFF;
+  background-color: #4056A1;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  font-size: 40px;
+  font-family: 'Bungee', cursive;
+}
+
+.logo {
+  display: flex;
+  align-self: flex-end;
+  padding-bottom: 0.5em;
+}
+
+.direction {
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
+  padding-bottom: 0.5em;
+  column-gap: 0em;
+  align-self: flex-end;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
+  float: right; 
+}
