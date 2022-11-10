@@ -1,0 +1,40 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+
+ /*
+  * Header layout stuff
+  */
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 520px;
+  width: 100%;
+  padding-top: 120px;
+  justify-content: center;
+  background-color: #00bcd4;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+}
+
+ /*
+  * Avatar layout (vertically and horizontally centered)
+  */
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ /*
+  * Name layout (horizontally centered)
+  */
+
+.name {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+}

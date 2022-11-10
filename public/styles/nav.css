@@ -9,12 +9,13 @@
   */
 
 nav {
+  position: fixed;
   display: flex;
   flex-direction: row;
   align-content: space-between;
   gap: 90px;
   height: 120px;
-  width: device-width;
+  width: 100%;
   color: #FFFFFF;
   background-color: #4056A1;
   padding-left: 1.5em;
@@ -23,11 +24,19 @@ nav {
   font-family: 'Bungee', cursive;
 }
 
+ /*
+  * Logo layout stuff
+  */
+
 .logo {
   display: flex;
   align-self: flex-end;
   padding-bottom: 0.5em;
 }
+
+ /*
+  * Direction(sentense & icon) layout stuff
+  */
 
 .direction {
   display: flex;
