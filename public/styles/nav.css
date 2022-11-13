@@ -49,3 +49,12 @@ nav {
   font-size: 24px;
   float: right; 
 }
+
+.direction-words {
+  height: 24px;
+}
+
+.direction-icon {
+  padding-left: 3.3em;
+   color: red;
+}
