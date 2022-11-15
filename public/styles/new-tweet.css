@@ -21,6 +21,11 @@ form {
   font-family: 'Bungee', cursive;
 }
 
+label {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+}
+
 textarea {
   border-top-style: hidden;
   border-right-style: hidden;
