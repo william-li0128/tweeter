@@ -1,0 +1,84 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+
+ /*
+  * article layout stuff
+  */
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  margin-top: 3em;
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-style: solid;
+  border-width: medium;
+  padding: 1em;
+}
+
+article header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: auto;
+  width: 100%;
+  padding-top: 0px;
+  justify-content: left;
+  background-color: #f4f1ec;
+  background-image: none;
+  font-weight: normal;
+}
+
+.tweet-avatar {
+  transform: scale(0.75);
+}
+
+.tweet-name {
+  padding-left: 0.5em;
+  justify-content: center;
+}
+
+.tweet-username {
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
+  align-self: flex-end;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #C5CBE3;
+  float: right; 
+}
+
+.tweet-text {
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 2em;
+  font-weight: bold;
+  border-bottom: 0.2em solid;
+}
+
+article footer {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.tweet-icon {
+  display: flex;
+  margin-left: auto;
+  float: right; 
+  align-items: baseline;
+  color: #4054a1;
+  justify-content: space-between;
+}
+
+.tweet-icon i {
+  flex: auto;
+  padding: 0.5em;
+}

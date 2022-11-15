@@ -6,8 +6,6 @@
 // This is used to help users get to know how many valid words
 // they could input.
 
-console.log("js file loaded.")
-
 $(document).ready(function() {
   $("#tweet-text").on('keyup', function () {
     const remainChar = 140 - this.value.length;

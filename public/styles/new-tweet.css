@@ -5,18 +5,17 @@
  */
 
  /*
-  * Nav layout stuff
+  * New-tweet layout stuff
   */
 
 
 form {
-  position: fixed;
   display: flex;
   flex-direction: column;
   align-content: space-between;
-  width: 90%;
+  width: 100%;
   color: #545149;
-    background-color: #f4f1ec;
+  background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Bungee', cursive;
 }
@@ -55,5 +54,4 @@ button {
 output {
   display: flex;
   float: right; 
-
 }
