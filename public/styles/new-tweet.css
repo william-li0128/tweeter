@@ -1,0 +1,54 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+
+ /*
+  * Nav layout stuff
+  */
+
+
+form {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  width: 90%;
+  color: #545149;
+    background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: 'Bungee', cursive;
+}
+
+textarea {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom: 0.2rem solid;
+  background-color: #f4f1ec;
+  color: #545149;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  margin-bottom: 1em;
+  height: 48px;
+}
+
+button {
+  background-color: #4056A1;
+  color: #ffffff;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+output {
+  display: flex;
+  float: right; 
+
+}
