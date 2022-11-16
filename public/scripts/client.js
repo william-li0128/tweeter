@@ -6,9 +6,16 @@
 
 // Render the tweets page
 
-$(document).ready(()=>{ // only start the loop when previous append has been finished.
-  // Fake data taken from initial-tweets.json
+$(document).ready(()=>{ // only run the code when previous append has been finished.
+  // empty object to store tweet data
   const data = [];
+
+  // Define escape funtion to prevent an XSS attack
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   
   // Define the createTweetElement function
   
@@ -20,7 +27,7 @@ $(document).ready(()=>{ // only start the loop when previous append has been fin
       <p class="tweet-name">${tweet["user"]["name"]}</p>
       <p class="tweet-username">${tweet["user"]["handle"]}</p>
     </header>
-    <p class="tweet-text">${tweet["content"]["text"]}</p>
+    <p class="tweet-text">${escape(tweet["content"]["text"])}</p>
     <footer>
       <p class="created-at">${timeago.format(tweet["created_at"])}</p>
       <div class="tweet-icon">
@@ -63,13 +70,10 @@ $(document).ready(()=>{ // only start the loop when previous append has been fin
     });
   };
   loadTweets();
-  
-  });
-  
+
   // Add the submit listener.
-  
   // Attach a submit handler to the form
-  $(document).ready(()=>{
+
     $( "#compose-tweet" ).submit(function( event ) {
       // Stop form from submitting normally
       event.preventDefault();
@@ -82,7 +86,7 @@ $(document).ready(()=>{ // only start the loop when previous append has been fin
       } else if (textLength === 0) {
         alert("Tweet content is not present")
       } else {
-          $.post( url, text );
+          $.post( url, escape(text) );
       };
     });
   });
