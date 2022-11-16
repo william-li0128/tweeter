@@ -74,7 +74,14 @@ $(document).ready(()=>{
     event.preventDefault();
     const $form = $( this ),
     text = $form.serialize(),
+    textLength = text.length - 5,
     url = $form.attr("action");
-    $.post( url, text );
+    if (textLength > 140) {
+      alert("Tweet content is too long!");
+    } else if (textLength === 0) {
+      alert("Tweet content is not present")
+    } else {
+        $.post( url, text );
+    };
   });
 });
