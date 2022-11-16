@@ -36,9 +36,10 @@ const createTweetElement = function(tweet) {
 
 const renderTweets = function(tweets) {
   let $tweet = "";
-
+  // sort tweets object set from the latest to the oldest.
+  const sortTweets = tweets.sort((a,b) => (a["created_at"] > b["created_at"]) ? -1 : ((b["created_at"] > a["created_at"]) ? 1 : 0))
   // loops through tweets
-  for (const tweet of tweets) {
+  for (const tweet of sortTweets) {
     // calls createTweetElement for each tweet
     $tweet = createTweetElement(tweet);
     // takes return value and appends it to the tweets container
