@@ -4,8 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(()=>{ // only start the loop when previous append has been finished.
+// Render the tweets page
 
+$(document).ready(()=>{ // only start the loop when previous append has been finished.
 // Fake data taken from initial-tweets.json
 const data = [
   {
@@ -64,12 +65,23 @@ const renderTweets = function(tweets) {
     // calls createTweetElement for each tweet
     $tweet = createTweetElement(tweet);
     // takes return value and appends it to the tweets container
-    console.log($tweet); // to see what it looks like
     $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
       };
 
 };
-
 renderTweets(data);
+});
 
+// Add the submit listener.
+
+// Attach a submit handler to the form
+$(document).ready(()=>{
+  $( "#compose-tweet" ).submit(function( event ) {
+    // Stop form from submitting normally
+    event.preventDefault();
+    const $form = $( this ),
+    text = $form.serialize(),
+    url = $form.attr("action");
+    $.post( url, text );
+  });
 });
