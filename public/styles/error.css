@@ -1,0 +1,40 @@
+/* The alert message box */
+.alert {
+  display: flex;
+  flex-direction: row;
+  height: 48px;
+  border: #f44336;
+  border-style: solid;
+  border-width: medium;
+  color: #f44336;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.fa-triangle-exclamation {
+  display: flex;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  justify-content: center;
+}
+
+/* The close button */
+.closebtn {
+  display: flex;
+  margin-left: auto;
+  margin-right: 0.2em;
+  float: right; 
+  color: #f44336;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  align-items: baseline;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}

@@ -10,6 +10,8 @@ $(document).ready(()=>{ // only run the code when previous append has been finis
   // empty object to store tweet data
   const data = [];
 
+  $(".alert").hide();
+
   // Define escape funtion to prevent an XSS attack
   const escape = function (str) {
     let div = document.createElement("div");
@@ -77,16 +79,17 @@ $(document).ready(()=>{ // only run the code when previous append has been finis
     $( "#compose-tweet" ).submit(function( event ) {
       // Stop form from submitting normally
       event.preventDefault();
+      $(".alert").slideUp();
       const $form = $( this ),
       text = $form.serialize(),
       textLength = text.length - 5,
       url = $form.attr("action");
       if (textLength > 140) {
-        alert("Tweet content is too long!");
+        $(".too-long-alert").slideDown();
       } else if (textLength === 0) {
-        alert("Tweet content is not present")
+        $(".empty-alert").slideDown();
       } else {
-          $.post( url, escape(text) );
+        $.post( url, escape(text) );
       };
     });
   });

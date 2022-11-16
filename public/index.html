@@ -32,6 +32,9 @@
 
     <!-- Article CSS -->
     <link rel="stylesheet" href="/styles/article.css" type="text/css" />
+    
+    <!-- Error CSS -->
+    <link rel="stylesheet" href="/styles/error.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -72,6 +75,21 @@
     <main class="container">
       <!-- Form section here -->
       <section class="new-tweet">
+        <!-- error message section here -->
+        <div class="alert too-long-alert">
+          <i class="fa-solid fa-triangle-exclamation"></i>          
+          <p><strong>Too long! </strong> Plz rspct our arbitrary limit of 140 chars</p>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        </div>
+
+        <div class="alert empty-alert">
+          <i class="fa-solid fa-triangle-exclamation"></i>          
+          <p><strong>Empty content! </strong> Plz tell us more!</p>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        </div>
+
         <h2>Compose Tweet</h2>
         <form id="compose-tweet" action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
