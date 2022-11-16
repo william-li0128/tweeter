@@ -8,30 +8,7 @@
 
 $(document).ready(()=>{ // only start the loop when previous append has been finished.
 // Fake data taken from initial-tweets.json
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
+const data = [];
 
 // Define the createTweetElement function
 
@@ -45,7 +22,7 @@ const createTweetElement = function(tweet) {
   </header>
   <p class="tweet-text">${tweet["content"]["text"]}</p>
   <footer>
-    <p class="created-at">${tweet["created_at"]}</p>
+    <p class="created-at">${timeago.format(tweet["created_at"])}</p>
     <div class="tweet-icon">
       <i class="fa-solid fa-flag"></i>
       <i class="fa-sharp fa-solid fa-retweet"></i>
@@ -70,6 +47,22 @@ const renderTweets = function(tweets) {
 
 };
 renderTweets(data);
+
+// define the function to load tweets from the database
+
+const loadTweets = function() {
+  const $button = $('#submit-new-tweet');
+  $button.on('click', function () {
+    console.log('Button clicked, performing ajax JSON response');
+    $.ajax('http://localhost:8080/tweets', { method: 'GET' })
+    .then(function (tweetsContents) {
+      console.log('Success: ', tweetsContents);
+      renderTweets(tweetsContents);
+    });
+  });
+};
+loadTweets();
+
 });
 
 // Add the submit listener.
