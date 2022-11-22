@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- Fonts Link Tag -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +18,10 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+
+    <!-- Responsive Design CSS -->
+    <link rel="stylesheet" href="/styles/responsive/mobile.css" type="text/css" media="(min-width:300px)" />
+    <link rel="stylesheet" href="/styles/responsive/desktop.css" type="text/css" media="(min-width:1024px)" />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -61,51 +66,53 @@
     </nav>
 
     <!-- User's avatar and name header (fixed) -->
-    <header>
-      <div class="avatar">
-          <img src="/images/profile-hex.png" alt="female user's animation avatar"> 
-      </div>
-      <br>
-      <div class="name">
-          <h2>William Li</h2>
-      </div>
-  </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <!-- Form section here -->
-      <section class="new-tweet">
-        <!-- error message section here -->
-        <div class="alert too-long-alert">
-          <i class="fa-solid fa-triangle-exclamation"></i>          
-          <p><strong>Too long! </strong> Plz rspct our arbitrary limit of 140 chars</p>
-          <i class="fa-solid fa-triangle-exclamation"></i>
-          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    <section class="contents">
+      <header>
+        <div class="avatar">
+            <img src="/images/profile-hex.png" alt="female user's animation avatar"> 
         </div>
-
-        <div class="alert empty-alert">
-          <i class="fa-solid fa-triangle-exclamation"></i>          
-          <p><strong>Empty content! </strong> Plz tell us more!</p>
-          <i class="fa-solid fa-triangle-exclamation"></i>
-          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <br>
+        <div class="name">
+            <h2>William Li</h2>
         </div>
+      </header>
 
-        <h2>Compose Tweet</h2>
-        <form id="compose-tweet" action="/tweets" method="POST">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button type="submit" id="submit-new-tweet">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <!-- Form section here -->
+        <section class="new-tweet">
+          <!-- error message section here -->
+          <div class="alert too-long-alert">
+            <i class="fa-solid fa-triangle-exclamation"></i>          
+            <p><strong>Too long! </strong> Plz rspct our arbitrary limit of 140 chars</p>
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
           </div>
-        </form>
-      </section>
 
-      <!-- Tweet container here -->
+          <div class="alert empty-alert">
+            <i class="fa-solid fa-triangle-exclamation"></i>          
+            <p><strong>Empty content! </strong> Plz tell us more!</p>
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+          </div>
 
-      <section id="tweets-container">
-      </section>
+          <h2>Compose Tweet</h2>
+          <form id="compose-tweet" action="/tweets" method="POST">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div>
+              <button type="submit" id="submit-new-tweet">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
 
-    </main>
+        <!-- Tweet container here -->
+
+        <section id="tweets-container">
+        </section>
+
+      </main>
+    </section>
   </body>
 </html>

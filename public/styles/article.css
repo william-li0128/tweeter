@@ -20,6 +20,11 @@ article {
   border-style: solid;
   border-width: medium;
   padding: 1em;
+  box-shadow: none;
+}
+
+article:hover {
+  box-shadow: 10px 5px #C5CBE3;
 }
 
 article header {
@@ -81,4 +86,12 @@ article footer {
 .tweet-icon i {
   flex: auto;
   padding: 0.5em;
+}
+
+.tweet-fa-icons {
+  color: #4054a1
+}
+
+.tweet-fa-icons:hover {
+  color: #C6A14F
 }

@@ -33,9 +33,9 @@ $(document).ready(()=>{ // only run the code when previous append has been finis
     <footer>
       <p class="created-at">${timeago.format(tweet["created_at"])}</p>
       <div class="tweet-icon">
-        <i class="fa-solid fa-flag"></i>
-        <i class="fa-sharp fa-solid fa-retweet"></i>
-        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-flag tweet-fa-icons"></i>
+        <i class="fa-sharp fa-solid fa-retweet tweet-fa-icons"></i>
+        <i class="fa-solid fa-heart tweet-fa-icons"></i>
       </div>
     </footer>
     </article>
@@ -93,3 +93,4 @@ $(document).ready(()=>{ // only run the code when previous append has been finis
       };
     });
   });
+  

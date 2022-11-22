@@ -1,0 +1,66 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+
+ /*
+  * des responsive layout stuff
+  */
+
+nav {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  gap: 90px;
+  height: 120px;
+  width: 100%;
+  color: #FFFFFF;
+  background-color: #4056A1;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  font-size: 40px;
+  font-family: 'Bungee', cursive;
+}
+
+.contents {
+  display: flex;
+  flex-direction: row;
+  padding-top: 240px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 30%;
+  background-color: #00bcd4;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  margin-top: -4em;
+}
+
+ /*
+  * Name layout (horizontally centered)
+  */
+
+.name {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  margin-top: -1em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 66.7%;
+}
