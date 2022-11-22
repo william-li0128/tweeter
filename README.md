@@ -19,3 +19,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
+!["Screenshot of initial input page"](https://github.com/william-li0128/tweeter/blob/master/docs/initial-tweet-box.png?raw=true)
+!["Screenshot of mobile tweets page"](https://github.com/william-li0128/tweeter/blob/master/docs/tweets-mobile.png?raw=true)
+!["Screenshot of desktop tweets page"](https://github.com/william-li0128/tweeter/blob/master/docs/tweets-desktop.png?raw=true)
+!["Screenshot of hover style design"](https://github.com/william-li0128/tweeter/blob/master/docs/hover-style.png?raw=true)
+!["Screenshot of empty content alarm"](https://github.com/william-li0128/tweeter/blob/master/docs/empty-content-alarm.png?raw=true)
+!["Screenshot of chars limit alarm"](https://github.com/william-li0128/tweeter/blob/master/docs/too-long-content-alarm.png?raw=true)
