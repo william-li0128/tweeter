@@ -61,24 +61,13 @@ $(document).ready(()=>{ // only run the code when previous append has been finis
   // define the function to load tweets from the database
   
   const loadTweets = function() {
+      $('#tweets-container').empty();
       $.ajax('/tweets', { method: 'GET' })
       .then(function (tweetsContents) {
         renderTweets(tweetsContents);
       });
   };
   loadTweets();
-
-  // const loadAfterTweets = function() {
-  //   const $button = $('#submit-new-tweet');
-  //   $button.on('click', function () {
-  //     console.log('Button clicked, performing ajax JSON response');
-  //     $.ajax('/tweets', { method: 'GET' })
-  //     .then(function (tweetsContents) {
-  //       renderTweets(tweetsContents);
-  //     });
-  //   });
-  // };
-  // loadAfterTweets();
 
   // Add the submit listener.
   // Attach a submit handler to the form
@@ -97,7 +86,7 @@ $(document).ready(()=>{ // only run the code when previous append has been finis
         $(".empty-alert").slideDown();
       } else {
         $.post( url, escape(text) )
-        .then(console.log("posted"));
+        .then(loadTweets());
       };
 
       const tweetContents = document.getElementById('tweet-text');
@@ -105,30 +94,10 @@ $(document).ready(()=>{ // only run the code when previous append has been finis
       tweetContents.value = '';
 
       const charLimit = document.getElementById('char-limit');
-      // 👇️ clear input field
+      // 👇️ reset char input
       charLimit.value = 140;
 
     });
-
-    // clear the new tweet form after submit
-
-    // const btn = document.getElementById('submit-new-tweet');
-
-    // btn.addEventListener('click', function handleClick(event) {
-    //   // 👇️ if you are submitting a form (prevents page reload)
-    //   event.preventDefault();
-  
-    //   const tweetContents = document.getElementById('tweet-text');
-  
-    //   // Send value to server
-    //   console.log(tweetContents.value);
-  
-    //   // 👇️ clear input field
-    //   tweetContents.value = '';
-
-    //   loadTweets();
-
-    // });
 
   });
   
