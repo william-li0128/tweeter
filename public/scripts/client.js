@@ -63,10 +63,8 @@ $(document).ready(()=>{ // only run the code when previous append has been finis
   const loadTweets = function() {
     const $button = $('#submit-new-tweet');
     $button.on('click', function () {
-      console.log('Button clicked, performing ajax JSON response');
       $.ajax('http://localhost:8080/tweets', { method: 'GET' })
       .then(function (tweetsContents) {
-        console.log('Success: ', tweetsContents);
         renderTweets(tweetsContents);
       });
     });
